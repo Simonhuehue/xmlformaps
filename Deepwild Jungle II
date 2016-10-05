@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<map proto="1.4.1">
+<name>Deepwind Jungle II</name>
+<version>1.1.0</version>
+<objective>Destroy all the emerald and obsidian monuments on the opponents side</objective>
+<edition>standard</edition>
+<gamemode>dtm</gamemode>
+<authors>
+	<author uuid="5f386e2d-6962-45a3-a9b6-adf1b8075e08" />
+		<!-- Twynix_ --> 
+</authors>
+<contributors>
+	<contributor uuid="8af5859a-1d6e-4fbd-ae5f-4c63ff630fa4" />
+	    <!-- KingOfSquares -->
+</contributors>
+<teams>
+	<team id="blue-team" color="blue" max="20">Blue Team</team>
+	<team id="red-team" color="dark red" max="20">Red Team</team>
+</teams>
+<spawns>
+	<spawns>
+		<spawn team="blue-team" kit="blue" yaw="180">
+			<cylinder base="549.5,31.18,-548.5" radius="0" height="0"/>
+		</spawn>
+		<spawn team="red-team" kit="red" yaw="0">
+			<cylinder base="549.5,31.18,670.5" raduis="0" height="0"/>
+		</spawn>
+    </spawns>
+    <default yaw="0">
+    	<cylinder base="540.5,65.18,-609.5" radius="0" height="0"/>
+    </default>
+</spawns>
+<kits>
+	<kit id="spawn">
+		<item slot="0" material="stone_sword"/>
+		<item slot="1" enchantment="arrow infinite:1" material="bow"/>
+		<item slot="28" amount="1" material="arrow"/>
+		<item slot="2" material="diamond_pickaxe"/>
+		<item slot="3" material="iron_axe"/>
+		<item slot="4" amount="64" damage="3" material="log"/>
+		<item slot="5" amount="64" material="glass"/>
+		<item slot="7" amount="1" material="golden_apple"/>
+		<item slot="8" amount="64" material="cooked_beef"/>
+		<item slot="30" material="iron_shovel"/>
+	</kit>
+	<kit name="red" parents="spawn">
+		<helmet color="cd0000">leather helmet</helmet>
+		<chestplate color="cd0000">leather chestplate</chestplate>
+		<leggings color="cd0000">leather leggins</leggings>
+		<boots color="cd0000 ">leather boots</boots>
+	</kit>
+	<kit name="blue" parents="spawn">
+		<helmet color="0066cc">leather helmet</helmet>
+		<chestplate color="0066cc">leather chestplate</chestplate>
+		<leggings color="0066cc">leather leggins</leggings>
+		<boots color="0066cc">leather boots</boots>
+	</kit>
+</kits>
+<destroyables materials="obsidian,emerald">
+
+	<!-- Blue monuments -->
+
+	<destroyable name="EmeraldMonument1" owner="blue">
+		<cuboid name="blue-EmeraldMonument1" min="521,30,-579" max="521,31,-579"/>
+	</destroyable>
+	<destroyable name="EmeraldMonument2" owner="blue">
+		<cuboid name="blue-EmeraldMonument2" min="577,30,-579" max="577,31,-579"/>
+	</destroyable>
+	<destroyable name="ObsidianMonument" owner="blue">
+		<cuboid name="blue-ObsidianMonument" min="549,31,-577" max="549,31,-577"/>
+	</destroyable>
+
+	<!-- Red monuments -->
+
+	<destroyable name="EmeraldMonument1" owner="red">
+		<cuboid name="red-EmeraldMonument1" min="577,30,-641" max="577,31,-641"/>
+	</destroyable>
+	<destroyable name="EmeraldMonument2" owner="red">
+		<cuboid name="red-EmeraldMonument2" min="521,30,-641" max="521,31,-641"/>
+	</destroyable>
+	<destroyable name="ObsidianMonument" owner="red">
+		<cuboid name="red-ObsidianMonument" min="549,31,-643" max="549,31,-643"/>
+	</destroyable>
+</destroyables>
+
+
